@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class JupiterAssertionTests {
 
     /* 수업목표. junit5에서 제공하는 Assertions에서 제공하는 메소드에 대해 이해하고 활용할 수 있다. */
@@ -26,7 +28,7 @@ public class JupiterAssertionTests {
 
         /* 설명. 3. then */
 //        Assertions.assertEquals(expected,result);
-        Assertions.assertEquals(expected, result, "틀렸읍니다.");
+        assertEquals(expected, result, "틀렸읍니다.");
 
     }
 
@@ -87,8 +89,8 @@ public class JupiterAssertionTests {
         // then
         Assertions.assertAll(
                 "그룹화된 테스트의 이름(테스트 실패 시 보여짐)",
-                () -> Assertions.assertEquals(firstName, person.getFirstName(), () -> "firstName이 잘못됨"),
-                () -> Assertions.assertEquals(lastName, person.getLastName(), () -> "lastName이 잘못됨")
+                () -> assertEquals(firstName, person.getFirstName(), () -> "firstName이 잘못됨"),
+                () -> assertEquals(lastName, person.getLastName(), () -> "lastName이 잘못됨")
 
         );
     }
@@ -111,7 +113,7 @@ public class JupiterAssertionTests {
         Assertions.assertAll(
                 () -> Assertions.assertInstanceOf(IllegalArgumentException.class, exception,
                         () -> "예외 타입이 일치하지 않음"),
-                () -> Assertions.assertEquals(expectedErrorMessage, exception.getMessage(),
+                () -> assertEquals(expectedErrorMessage, exception.getMessage(),
                         () -> "예외 메시지가 일치하지 않음")
         );
     }
