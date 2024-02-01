@@ -40,14 +40,13 @@ public class Application5 {
                 k++;
                 index1++;
             }
-            System.out.println(" 분할"+ Arrays.toString(arr));
         }
         /* 설명. 좌측 인덱스 마저 옮기기 */
         while (index1 <= median) {
             arr[k] = temp[index1];
+            System.out.println("arr = " + Arrays.toString(arr));
             k++;
             index1++;
-            System.out.println("좌측 " + Arrays.toString(arr));
         }
 
         /* 설명. 우측 인덱스 마저 옮기기 */
@@ -55,7 +54,6 @@ public class Application5 {
             arr[k] = temp[index2];
             k++;
             index2++;
-            System.out.println("우측 " +Arrays.toString(arr));
         }
     }
 }

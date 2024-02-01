@@ -1,5 +1,6 @@
 package com.ohgiraffers.chap02.section01.sorting;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* 수업목표. 퀵 정렬을 이해할 수 있다. */
@@ -37,6 +38,7 @@ public class Application4 {
         System.out.println("process call");
         int pivot = process(lo, hi, arr);
         System.out.println("lo = "+ lo + ", hi = " +hi + ", pivot = " + pivot);
+        System.out.println(Arrays.toString(arr));
         System.out.println("process end");
         solution(lo, pivot, arr);
         solution(pivot + 1, hi, arr);
