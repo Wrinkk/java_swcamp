@@ -45,7 +45,7 @@ public class Application3 {
             char[] ch = str.toCharArray();
 
             for (int j = 0; j < ch.length; j++) {
-                map[i][j] = Character.getNumericValue(ch[j]);
+                map[i][j] = Character.getNumericValue(ch[j]); // 문자열을 받
             }
         }
 
@@ -79,9 +79,6 @@ public class Application3 {
                 /* 설명. 가야될 방향의 좌표를(Node 객체를) queue에 쌓는다.*/
                 q.add(new Node(curX, curY));
                 map[curX][curY] = map[n.x][n.y] + 1;
-                System.out.println("curX = " + curX);
-                System.out.println("curY = " + curY);
-                System.out.println("map[curX][curY] " + map[curX][curY]);
 
                 visit[curX][curY] = true;
             }

@@ -58,9 +58,9 @@ public class Application2 {
         BufferedReader br = toBufferedReader(input);
         StringTokenizer st;
         st = new StringTokenizer(br.readLine());
-        M = Integer.valueOf(st.nextToken());
-        N = Integer.valueOf(st.nextToken());
-        K = Integer.valueOf(st.nextToken());
+        M = Integer.valueOf(st.nextToken()); //배추밭의 가로 길이
+        N = Integer.valueOf(st.nextToken()); //배추밭의 세로 길이
+        K = Integer.valueOf(st.nextToken()); //배추의 수
 
         map = new int[N][M];
         visit = new boolean[N][M];
